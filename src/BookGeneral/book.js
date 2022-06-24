@@ -1,15 +1,22 @@
 import React from 'react'
 import godfather from './godfather.jpg'
 import './book.css'
+import Sidebar from "../sidebar/sidebar";
+
 export default function Book() {
   return (
     <div class="BookDes">
         <img class="BookPic" src={godfather} alt="Godfather" ></img>
-        <div>
+        <div class="Des">
           <span class="Title">The Godfather</span>
           <span class="Author">Author: Mario Puzo</span>
+          <span class="Description">The Godfather by Mario Puzo (Author), Illustrated by Robert Carter, Introduced by Jonathan Freedland. Mario Puzo’s brilliant and brutal story of Mafia feuds and retribution in post-war New York is published in a sensational new illustrated Folio Society edition, introduced...</span>   
+          <div class="Favorite">    
+            <button class="Favorite">Favorite</button>
+            <button class="Favorite">Wishlist</button>
+          </div>   
         </div>
-        <div><span class="Description">The Godfather by Mario Puzo (Author), Illustrated by Robert Carter, Introduced by Jonathan Freedland. Mario Puzo’s brilliant and brutal story of Mafia feuds and retribution in post-war New York is published in a sensational new illustrated Folio Society edition, introduced...</span></div>
+        <Sidebar />
     </div>
   )
 }
