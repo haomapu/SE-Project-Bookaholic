@@ -1,0 +1,38 @@
+.BookPic {
+    width: 300px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 20%;
+    float: left;
+    border: inset;
+    border-radius: 5%;
+}
+
+.Title {
+    font-size: 40px;
+    width: 30%;
+    font-weight: bold;
+    margin-top: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
+.Author {
+    font-size: 25px;
+    width: 32%;
+    font-style: italic;
+    font-weight: bold;
+    float: left;
+    margin-top: 10px
+    ;
+    margin-left: 20px;
+}
+
+.Description {
+    font-size: 20px;
+    width: 30%;
+    margin-top: 10px;
+    float: left;
+    margin-left: 20px;
+}
+
