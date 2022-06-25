@@ -7,7 +7,7 @@ function App() {
     <TopBar />
     <Header />
     <Book />
-    <Comment />
+    <Comment />  
   </div>;
 }
 

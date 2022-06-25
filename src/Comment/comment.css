@@ -2,9 +2,10 @@
     width: 70%;
     border: inset;
     text-align: center;
-    margin-left: auto;
+    margin-left: 150px;
     margin-right: auto;
     background-color: pink;
+    padding: 10px;
 }
 
 .comment {
@@ -24,13 +25,17 @@
 
 .cmt {
     width: 80%;
-    height: 30%;
+    height: 50px;
     padding: 12px;
     margin-left: 20px;
 }
 
 .postBut {
-    width: 10%;
-    height: 30px;
+    width: 5%;
+    height: 50px;
     align-items: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
 }

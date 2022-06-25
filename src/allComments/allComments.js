@@ -8,7 +8,7 @@ export default function allComments() {
       <img class="avacmted" src={Ava} alt=""></img>
       <div class="user">
         <span class="username">Hao Pham</span>
-        <span class="userCmt">This is a very good books</span>
+        <span class="userCmt">This is a very good book</span>
       </div>
     </div>
   )

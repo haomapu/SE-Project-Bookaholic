@@ -28,13 +28,13 @@
 }
 
 .Author {
-    font-size: 25px;
+    font-size: 30px;
     font-style: italic;
     font-weight: bold;
 }
 
 .Description {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 30px;
 }
 
@@ -45,8 +45,19 @@
 }
 
 .FavBut {
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 10px;
+    background-color: pink;
+    font-weight: bold;
+    border-radius: 10%
+}
+
+.rateStar {
+    font-size: 25px;
+}
+
+.checked {
+    color: orange;
 }

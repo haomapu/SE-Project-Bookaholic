@@ -6,7 +6,7 @@ export default function Sidebar() {
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT US</span>
                 <img
-                    src="https://icdn.dantri.com.vn/thumb_w/770/2022/05/30/iu-11-1653887051969.jpg"
+                    src="http://image.daidoanket.vn/images/upload/vanht/10152021/w.jpg"
                     height="433"
                     width="236"
                     frameborder="0"
