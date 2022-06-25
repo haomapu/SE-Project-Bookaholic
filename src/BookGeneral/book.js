@@ -11,9 +11,9 @@ export default function Book() {
           <span class="Title">The Godfather</span>
           <span class="Author">Author: Mario Puzo</span>
           <span class="Description">The Godfather by Mario Puzo (Author), Illustrated by Robert Carter, Introduced by Jonathan Freedland. Mario Puzo’s brilliant and brutal story of Mafia feuds and retribution in post-war New York is published in a sensational new illustrated Folio Society edition, introduced...</span>   
-          <div class="Favorite">    
-            <button class="Favorite">Favorite</button>
-            <button class="Favorite">Wishlist</button>
+          <div class="Fav">    
+            <button class="FavBut">Favorite</button>
+            <button class="FavBut">Wishlist</button>
           </div>   
         </div>
         <Sidebar />
