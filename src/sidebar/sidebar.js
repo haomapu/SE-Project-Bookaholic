@@ -6,7 +6,7 @@ export default function Sidebar() {
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT US</span>
                 <img
-                    src="http://image.daidoanket.vn/images/upload/vanht/10152021/w.jpg"
+                    src="https://257mysvuxdt1vzvol37y9a62-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2021/11/Book-lover-bro.svg"
                     height="433"
                     width="236"
                     frameborder="0"
