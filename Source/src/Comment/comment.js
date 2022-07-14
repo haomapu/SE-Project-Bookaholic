@@ -2,17 +2,17 @@ import { useState } from 'react'
 import "./comment.css"
 import Ava from './heof.jpg'
 import AllComments from '../allComments/allComments'
+import { v4 } from 'uuid'
 
 export default function Comment() {
   const [cmt, setCmt] = useState([])
-  const [textInput, setTextInput] = useState("")
+  const [textInput, setTextInput] = useState("");
   const onTextInputchange = (e) => {
     setTextInput(e.target.value);
   }  
   const onClickBtn = (e) => {
-    setCmt(current => [textInput, ...current])
+    setCmt([...cmt, {id: v4(), name: textInput, isCompleted: false}]) 
   }
-
   return (
     <div class="all">
       <div class="comment">
@@ -20,13 +20,8 @@ export default function Comment() {
         <input class="cmt" placeholder="Write the comment..."  onChange={onTextInputchange}></input>
         <button class="postBut" onClick={onClickBtn}>Post</button>
       </div>
-        {cmt.map((element, index) => {
-          return (
-            <div key={index}>
-              <AllComments cmt={element}/>
-            </div>
-          );
-        })}
+        <AllComments cmt={cmt}/>
+        <AllComments cmt={textInput}/>
     </div>
   )
 }
