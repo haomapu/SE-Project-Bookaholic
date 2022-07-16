@@ -1,5 +1,4 @@
 import React from 'react'
-import godfather from './godfather.jpg'
 import './book.css'
 import Sidebar from "../sidebar/sidebar";
 import { useEffect, useState } from "react";
@@ -25,6 +24,7 @@ export default function Book() {
     };
     fetchAuthor();
   }, []);
+
   function getName() {
     Object.keys(Author).map(a => {
       if (Title.author === Author[a]._id && flag === 0)
@@ -35,6 +35,7 @@ export default function Book() {
         
     })
   }
+  
   getName()
 
   return (
