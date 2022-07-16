@@ -2,29 +2,48 @@ import React from 'react'
 import godfather from './godfather.jpg'
 import './book.css'
 import Sidebar from "../sidebar/sidebar";
-import { useState } from 'react'
+import { useEffect, useState } from "react";
 import axios from "axios";
+var flag = 0;
+let AuthorName = ""
 
 export default function Book() {
-  const [text, setText] = useState([]);
+  const [Title, setTitle] = useState("");
+  const [Author, setAuthor] = useState("");
   
-  function getQuote() {
-      axios.get("http://localhost:5000/book",  { crossdomain: true }).then(response => {
-        setText(response.data[0])
-      }).catch((error)=>{
-        console.log("Error",error);
-      });
+  useEffect(() => {
+      const fetchTitle = async () => {
+          const res = await axios.get("http://localhost:5000/book");
+          setTitle(res.data[0]);
+      };
+      fetchTitle();
+  }, []);
+  useEffect(() => {
+    const fetchAuthor = async () => {
+        const res = await axios.get("http://localhost:5000/author");
+        setAuthor(res.data);
+    };
+    fetchAuthor();
+  }, []);
+  function getName() {
+    Object.keys(Author).map(a => {
+      if (Title.author === Author[a]._id && flag === 0)
+      {
+        AuthorName = Author[a].name
+        flag = 1;
+      }
+        
+    })
   }
-
-  getQuote()
+  getName()
 
   return (
     <div className="BookDes">
-        <img className="BookPic" src={godfather} alt="Godfather" ></img>
+        <img className="BookPic" src= "https://images-na.ssl-images-amazon.com/images/I/61cfS2XXyEL.jpg" alt="Godfather" ></img>
         <div className="Des">
-          <span className="Title">{text.title}</span>
-          <span className="Author">Author: {text.author}</span>
-          <span className="Description">{text.description}</span>   
+          <span className="Title">{Title.title}</span>
+          <span className="Author">Author: {AuthorName}</span>
+          <span className="Description">{Title.description}</span>   
           <div className="rateStar">
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
