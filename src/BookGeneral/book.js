@@ -6,23 +6,25 @@ import { useState } from 'react'
 import axios from "axios";
 
 export default function Book() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState([]);
   
   function getQuote() {
-      axios.get("http://26.39.246.219:5000/book",  { crossdomain: true }).then(response => {
+      axios.get("http://localhost:5000/book",  { crossdomain: true }).then(response => {
         setText(response.data[0])
       }).catch((error)=>{
         console.log("Error",error);
       });
   }
+
   getQuote()
+
   return (
     <div class="BookDes">
         <img class="BookPic" src={godfather} alt="Godfather" ></img>
         <div class="Des">
-          <span class="Title">{text.name}</span>
-          <span class="Author">Author: Mario Puzo</span>
-          <span class="Description">The Godfather by Mario Puzo (Author), Illustrated by Robert Carter, Introduced by Jonathan Freedland. Mario Puzo’s brilliant and brutal story of Mafia feuds and retribution in post-war New York is published in a sensational new illustrated Folio Society edition, introduced...</span>   
+          <span class="Title">{text.title}</span>
+          <span class="Author">Author: {text.author}</span>
+          <span class="Description">{text.description}</span>   
           <div class="rateStar">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -35,7 +37,7 @@ export default function Book() {
             <button class="FavBut">Wishlist</button>
           </div>   
         </div>
-        <Sidebar />
+        <Sidebar /> 
     </div>
   )
 }
