@@ -9,7 +9,7 @@ export default function Sidebar() {
                     src="https://257mysvuxdt1vzvol37y9a62-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2021/11/Book-lover-bro.svg"
                     height="433"
                     width="236"
-                    frameborder="0"
+                    frameBorder="0"
                     scrolling="no"
                     alt=""
                 />

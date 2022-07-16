@@ -19,22 +19,22 @@ export default function Book() {
   getQuote()
 
   return (
-    <div class="BookDes">
-        <img class="BookPic" src={godfather} alt="Godfather" ></img>
-        <div class="Des">
-          <span class="Title">{text.title}</span>
-          <span class="Author">Author: {text.author}</span>
-          <span class="Description">{text.description}</span>   
-          <div class="rateStar">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+    <div className="BookDes">
+        <img className="BookPic" src={godfather} alt="Godfather" ></img>
+        <div className="Des">
+          <span className="Title">{text.title}</span>
+          <span className="Author">Author: {text.author}</span>
+          <span className="Description">{text.description}</span>   
+          <div className="rateStar">
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star"></span>
+            <span className="fa fa-star"></span>
           </div>
-          <div class="Fav">    
-            <button class="FavBut">Favorite</button>
-            <button class="FavBut">Wishlist</button>
+          <div className="Fav">    
+            <button className="FavBut">Favorite</button>
+            <button className="FavBut">Wishlist</button>
           </div>   
         </div>
         <Sidebar /> 

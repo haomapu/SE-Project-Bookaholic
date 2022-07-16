@@ -14,11 +14,11 @@ export default function Comment() {
   }
 
   return (
-    <div class="all">
-      <div class="comment">
-        <img class="ava" src={Ava} alt=""></img>
-        <input class="cmt" placeholder="Write the comment..."  onChange={onTextInputchange}></input>
-        <button class="postBut" onClick={onClickBtn}>Post</button>
+    <div className="all">
+      <div className="comment">
+        <img className="ava" src={Ava} alt=""></img>
+        <input className="cmt" placeholder="Write the comment..."  onChange={onTextInputchange}></input>
+        <button className="postBut" onClick={onClickBtn}>Post</button>
       </div>
         {cmt.map((element, index) => {
           return (
